@@ -1,6 +1,6 @@
 # android_mini_app
 
-base on: https://github.com//minimal-android-project.git
+base on: https://github.com/czak/minimal-android-project.git
 
 This repository explores how simple it can be to set up a valid,
 working Android project. You will need:
