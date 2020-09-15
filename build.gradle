@@ -39,12 +39,12 @@ android {
             manifestPlaceholders.appNameSuffix = ".200"
             resValue("integer", "imgs_limits", "200")
         }
-        img400{
-            dimension "imgs_count"
-            applicationIdSuffix ".img400"
-            manifestPlaceholders.appNameSuffix = ".400"
-            resValue("integer", "imgs_limits", "400")
-        }
+        // img400{
+        //     dimension "imgs_count"
+        //     applicationIdSuffix ".img400"
+        //     manifestPlaceholders.appNameSuffix = ".400"
+        //     resValue("integer", "imgs_limits", "400")
+        // }
     }
     dependencies {
         implementation('com.android.support:support-v4:23.0.0');
