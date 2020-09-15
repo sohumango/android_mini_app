@@ -1,6 +1,7 @@
 package com.minimal;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -18,10 +19,11 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends Activity {
-    private final int REQUEST_CODE = 1000;
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +39,8 @@ public class MainActivity extends Activity {
             }
             if (lst.size() > 0) {
                 Log.d("permission", "request: " + lst.toString());
-                ActivityCompat.requestPermissions(this, lst.toArray(new String[lst.size()]), REQUEST_CODE);
+                final int REQUEST_CODE = 1000;
+                ActivityCompat.requestPermissions(this, lst.toArray(new String[0]), REQUEST_CODE);
             } else {
                 Log.d("permission", "all ok");
             }
@@ -55,10 +58,11 @@ public class MainActivity extends Activity {
         frame.addView(btn1, params);
         // -------------Button event---------------------------
         btn1.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                final DateFormat df = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-                moduleA a = new moduleA();
+                final DateFormat df = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss", Locale.getDefault());
+                ModuleA a = new ModuleA();
                 btn1.setText("ver:" + a.getVersion()+ " " + df.format(new Date()));
             }
         });

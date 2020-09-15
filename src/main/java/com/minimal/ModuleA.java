@@ -1,6 +1,6 @@
 package com.minimal;
 
-public class moduleA {
+public class ModuleA {
     static {
         System.loadLibrary("moduleA");
     }

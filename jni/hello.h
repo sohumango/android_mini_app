@@ -2,7 +2,7 @@
 #define _Included_hello
 
 #include <jni.h>
-#define FUNC(x) Java_com_minimal_moduleA_ ## x
+#define FUNC(x) Java_com_minimal_ModuleA_ ## x
 #ifdef __cplusplus
 extern "C" {
 #endif
