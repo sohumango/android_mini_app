@@ -58,7 +58,8 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 final DateFormat df = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-                btn1.setText("clicked at: " + df.format(new Date()));
+                moduleA a = new moduleA();
+                btn1.setText("ver:" + a.getVersion()+ " " + df.format(new Date()));
             }
         });
 

@@ -23,8 +23,12 @@ android {
     defaultConfig{
         minSdkVersion 23
         applicationId "com.minimal.test1"
-        //resValue("string", "app_name_var", "mini")
         manifestPlaceholders.app_name_var = "mini"
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path file('./jni/Android.mk')
+        }
     }
 
     flavorDimensions "imgs_count"
